@@ -1,0 +1,111 @@
+body {
+    background-color: #f8f8f8;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Ocultar la barra de desplazamiento */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Para que el contenedor esté por encima de la sombra */
+}
+
+.titulo {
+    font-size: 3em;
+    color: #ffc107; /* Amarillo suave */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.flor-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 2em;
+    z-index: 1; /* Para que el contenedor esté por encima de la sombra */
+}
+
+.flor {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #fdd835; /* Amarillo vibrante */
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+.flor:hover {
+    transform: scale(1.1) translate(-50%, -50%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#generar-flor {
+    background-color: #ffc107; /* Amarillo suave */
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2em;
+}
+
+#generar-flor:hover {
+    background-color: #fdd835; /* Amarillo vibrante */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sombra-flores {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: -1; /* Para que la sombra esté detrás del contenedor */
+    top: 0;
+    left: 0;
+}
+
+/* Animación de aparición de la flor */
+@keyframes florecer {
+    0% {
+        transform: scale(0.2) translate(-50%, -50%);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+/* Animación de movimiento de la flor */
+@keyframes danzar {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
