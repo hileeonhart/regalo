@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: 'Inclusive Sans', sans-serif;
+    background-image: url('../Captura\ de\ pantalla\ 2024-09-21\ 071502.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Asegúrate de que el body ocupe toda la altura de la ventana */
+    
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad para oscurecer más */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+h1 {
+    text-align: center;
+    font-size: 100px;
+    color: white; /* Texto blanco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra negra */
+}
+
+.Con-2 {
+    display: none; /* Elemento oculto por defecto */
+    color: white; /* Texto blanco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra negra */
+}
+
+canvas {
+    display: block;
+}
+
+.Contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    margin: 0;
+}
+
+.Con {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    margin-top: 15px;
+    
+}
+
+.Texto {
+    display: none;
+    color: white; /* Texto blanco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra negra */
+}
+
+.Texto h2 {
+    font-size: 50px;
+    color: white; /* Texto blanco */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra negra */
+}
+
+#B12 {
+    margin-left: 30px;
+}
+
+.Button {
+    font-family: monospace;
+    font-size: x-large;
+    transition-duration: 0.2s;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: greenyellow; 
+    color: black; 
+    border: 2px solid green;
+    cursor: pointer;
+}
+.Button:hover{
+    transform: scale(1.1);
+    border-radius: 14px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: black;
+    background-color: white;
+}
+
+.Contenedor-Binicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Con-Emergente{
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+}
+
+.cua{
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: aparecer 0.5s ease-out;
+}
+
+@keyframes aparecer {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-20px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(-50%) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+}
+
+@media (max-width: 468px) {
+    body {
+        background: linear-gradient(100deg, blue, purple, pink);
+
+    }
+}
